@@ -8,11 +8,11 @@
 
     <link rel="shortcut icon" href="{{asset('tailwind/img/favicon.png')}}" type="image/x-icon">
 
-    <!-- GOOGLE FONTS  -->
+    <!-- PREMIUM GOOGLE FONTS  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <!-- Font Awesome CDN -->
@@ -29,8 +29,9 @@
       /*--color1: #007DB2;*/
       /* --color1: red; */
     }
-    *{ font-family: "Poppins", serif; }
-    h1, h2, h3, h4, h5, h6{ font-family: "Roboto", serif; }
+    *{ font-family: "Space Grotesk", sans-serif; }
+    h1, h2, h3, h4, h5, h6{ font-family: "Cinzel", serif; }
+    p, span, div{ font-family: "Libre Baskerville", serif; }
     html {
       scroll-behavior: smooth;
     }
@@ -61,12 +62,12 @@
 
     /*ANIMATED SHADOW START*/
     @keyframes shadow-move {
-      0% { box-shadow: 0 0 10px var(--color1); }
-      50% { box-shadow: 0 10px 20px var(--color1); }
-      100% { box-shadow: 0 0 10px var(--color1); }
+      0% { box-shadow: 0 0 15px rgba(143, 24, 255, 0.6); }
+      50% { box-shadow: 0 10px 25px rgba(0, 125, 178, 0.4), 0 0 15px rgba(143, 24, 255, 0.6); }
+      100% { box-shadow: 0 0 15px rgba(143, 24, 255, 0.6); }
     }
     .animated-shadow {
-      animation: shadow-move 2s infinite ease-in-out;
+      animation: shadow-move 3s infinite ease-in-out;
     }
     /*ANIMATED SHADOW END*/
 
@@ -176,7 +177,7 @@
 
     <!-- Navbar -->
     <div class="sticky top-0 z-50">
-      <nav id="navbar" class="bg-[#ffffff20] backdrop-blur-md shadow-lg transition-all duration-1000 ease-in-out border border-white/20">
+      <nav id="navbar" class="bg-[#ffffff20] backdrop-blur-md shadow-lg transition-all duration-2000 ease-in-out border border-white/20">
         <script>
           const navbar = document.getElementById('navbar');
 
@@ -193,7 +194,7 @@
           });
         </script>
 
-        <div class="px-6 sm:px-8 lg:px-10 max-w-7xl mx-auto">
+        <div class="px-6 sm:px-8 lg:px-10 max-w-full mx-auto">
         <div class="flex justify-between items-center py-4">
 
             <!-- Logo -->
@@ -282,86 +283,138 @@
 
     @yield('content')
 
-  <!-- Footer Section -->
-  <footer class="bg-gradient-to-r from-blue-500 to-purple-600 text-white">
-    <div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-12 gap-8">
+  <!-- Minimalist Premium Footer -->
+  <footer class="bg-slate-900 text-white border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-6 py-16">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
 
-      <!-- Left Section -->
-      <div class="md:col-span-6">
-        <div class="flex items-center gap-2 mb-4">
-          <img src="{{asset('tailwind/img/logoWhite.png')}}" alt="Logo" class="w-auto h-auto">
-          <!-- <h2 class="text-xl font-bold">KLOUD TECHNOLOGIES</h2> -->
-        </div>
-        <h3 class="text-lg font-semibold mb-3">Kloud Technologies Limited</h3>
-        <p class="text-sm mt-2">
-          Shanta Western Tower, Suit # 904, Level 9, 186 Bir Uttam <br>
-          Mir Sawkat Road, Tejgaon I/A, Dhaka â€“ 1208, Bangladesh.
-        </p>
+        <!-- Company Info Section -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="flex items-center gap-3">
+            <img src="{{asset('tailwind/img/logoWhite.png')}}" alt="Logo" class="w-auto h-12">
+          </div>
 
-        <div class="mt-4">
-          <h3 class="text-lg font-semibold mb-3">QUALITY POLICY</h3>
-          <p class="text-sm mt-1">
-            Facilitate seamless information flow through innovative ICT Infrastructure and services. <br>
-            Kloud Technologies Limited is ISO 9001:2015 Certified Company.
-          </p>
-        </div>
+          <div class="space-y-4">
+            <div>
+              <h3 class="text-2xl font-bold mb-2" style="color: #8F18FF;">Kloud Technologies Limited</h3>
+              <p class="text-slate-400 leading-relaxed text-sm">
+                Shanta Western Tower, Suit # 904, Level 9, 186 Bir Uttam<br>
+                Mir Sawkat Road, Tejgaon I/A, Dhaka – 1208, Bangladesh.
+              </p>
+            </div>
 
-        <div class="mt-4">
-          <h3 class="text-lg font-semibold mb-3">POLICY</h3>
-          <h6></h6>
-          <p class="text-sm mt-1">
-            Kloud is committed to ensuring information security by complying applicable ISO 27001:2022 standard & regulatory requirements and continually improving the ISMS to support our business objectives.
-          </p>
-        </div>
-      </div>
+            <div class="border-l-4 border-purple-500 pl-4">
+              <h4 class="text-lg font-semibold mb-2" style="color: #8F18FF;">Quality Policy</h4>
+              <p class="text-slate-400 text-sm leading-relaxed">
+                Facilitate seamless information flow through innovative ICT Infrastructure and services.<br>
+                <span style="color: #007DB2;" class="font-medium">ISO 9001:2015 Certified Company</span>
+              </p>
+            </div>
 
-      <!-- Middle Section -->
-      <div class="md:col-span-4">
-        <h3 class="text-lg font-semibold mb-3">Contact</h3>
-        <ul class="space-y-3 text-sm">
-          <li class="flex items-start gap-2">
-            <span class="text-xl"><i class="fa-solid fa-location-dot"></i></span>
-            <a href="#" class="hover:underline underline-offset-4">Dom-Inno, House-13, Road-7, Block-F, Banani,1213, Dhaka, Bangladesh</a>
-          </li>
-          <li class="flex items-center gap-2">
-            <span class="text-xl"><i class="fa-solid fa-phone"></i></span>
-            <a href="tel:+8809649161216" class="hover:underline underline-offset-4">+880 9649-161216</a>
-          </li>
-          <li class="flex items-center gap-2">
-            <span class="text-xl"><i class="fa-brands fa-whatsapp"></i></span>
-            <a href="https://wa.me/8801313752575" class="hover:underline underline-offset-4">+880 1313-752575</a>
-          </li>
-          <li class="flex items-center gap-2">
-            <span class="text-xl"><i class="fa-solid fa-envelope"></i></span>
-            <a href="mailto:contact@kloud.com.bd" class="hover:underline underline-offset-4">contact@kloud.com.bd</a>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Right Section -->
-      <div class="md:col-span-2">
-        <h3 class="text-lg font-semibold mb-3">Others</h3>
-        <ul class="space-y-2 text-sm">
-          <li><a href="#" class="hover:underline underline-offset-4">Career</a></li>
-          <li><a href="#" class="hover:underline underline-offset-4">Our Policies</a></li>
-          <li><a href="#" class="hover:underline underline-offset-4">Self Care</a></li>
-        </ul>
-
-        <!-- Social Icons -->
-        <div class="flex gap-4 mt-6 text-2xl">
-          <a href="https://www.linkedin.com/company/kloudtechnologieslimited" class="hover:text-gray-200 transform hover:scale-[1.5] transition duration-300"><i class="fab fa-linkedin"></i></a>
-          <a href="https://www.facebook.com/Kloud.Technologies.Ltd" class="hover:text-gray-200 transform hover:scale-[1.5] transition duration-300"><i class="fab fa-facebook"></i></a>
-          <a href="#" class="hover:text-gray-200 transform hover:scale-[1.7] transition duration-300"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="hover:text-gray-200 transform hover:scale-[1.7] transition duration-300"><i class="fab fa-instagram"></i></a>
+            <div class="border-l-4 border-blue-500 pl-4">
+              <h4 class="text-lg font-semibold mb-2" style="color: #007DB2;">Security Policy</h4>
+              <p class="text-slate-400 text-sm leading-relaxed">
+                Kloud is committed to ensuring information security by complying with applicable ISO 27001:2022 standards and regulatory requirements.
+              </p>
+            </div>
+          </div>
         </div>
 
+        <!-- Contact & Links Section -->
+        <div class="lg:col-span-4 space-y-6">
+          <div>
+            <h3 class="text-2xl font-bold mb-6" style="color: #007DB2;">Get In Touch</h3>
+            <div class="space-y-4">
+
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-lg flex items-center justify-center mt-1" style="background-color: rgba(143, 24, 255, 0.1);">
+                  <i class="fa-solid fa-location-dot text-lg" style="color: #8F18FF;"></i>
+                </div>
+                <div>
+                  <p class="text-slate-300 font-medium text-sm">Address</p>
+                  <p class="text-slate-400 text-sm">Dom-Inno, House-13, Road-7, Block-F,<br>Banani,1213, Dhaka, Bangladesh</p>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-4">
+                <div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background-color: rgba(0, 125, 178, 0.1);">
+                  <i class="fa-solid fa-phone text-lg" style="color: #007DB2;"></i>
+                </div>
+                <div>
+                  <p class="text-slate-300 font-medium text-sm">Phone</p>
+                  <a href="tel:+8809649161216" class="text-slate-400 hover:text-white transition-colors text-sm">+880 9649-161216</a>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-4">
+                <div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background-color: rgba(143, 24, 255, 0.1);">
+                  <i class="fa-brands fa-whatsapp text-lg" style="color: #8F18FF;"></i>
+                </div>
+                <div>
+                  <p class="text-slate-300 font-medium text-sm">WhatsApp</p>
+                  <a href="https://wa.me/8801313752575" class="text-slate-400 hover:text-white transition-colors text-sm">+880 1313-752575</a>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-4">
+                <div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background-color: rgba(0, 125, 178, 0.1);">
+                  <i class="fa-solid fa-envelope text-lg" style="color: #007DB2;"></i>
+                </div>
+                <div>
+                  <p class="text-slate-300 font-medium text-sm">Email</p>
+                  <a href="mailto:contact@kloud.com.bd" class="text-slate-400 hover:text-white transition-colors text-sm">contact@kloud.com.bd</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Links & Social -->
+        <div class="lg:col-span-3 space-y-6">
+          <div>
+            <h3 class="text-2xl font-bold mb-6" style="color: #8F18FF;">Quick Links</h3>
+            <ul class="space-y-3">
+              <li><a href="#" class="text-slate-400 hover:text-white transition-colors duration-300 text-sm">Career</a></li>
+              <li><a href="#" class="text-slate-400 hover:text-white transition-colors duration-300 text-sm">Our Policies</a></li>
+              <li><a href="#" class="text-slate-400 hover:text-white transition-colors duration-300 text-sm">Self Care</a></li>
+            </ul>
+          </div>
+
+          <!-- Social Media -->
+          <div>
+            <h3 class="text-2xl font-bold mb-6" style="color: #007DB2;">Follow Us</h3>
+            <div class="flex gap-3">
+              <a href="https://www.linkedin.com/company/kloudtechnologieslimited" class="w-10 h-10 rounded-lg flex items-center justify-center hover:bg-slate-700 transition-colors duration-300">
+                <i class="fab fa-linkedin text-slate-400 hover:text-white text-base"></i>
+              </a>
+              <a href="https://www.facebook.com/Kloud.Technologies.Ltd" class="w-10 h-10 rounded-lg flex items-center justify-center hover:bg-slate-700 transition-colors duration-300">
+                <i class="fab fa-facebook text-slate-400 hover:text-white text-base"></i>
+              </a>
+              <a href="#" class="w-10 h-10 rounded-lg flex items-center justify-center hover:bg-slate-700 transition-colors duration-300">
+                <i class="fab fa-twitter text-slate-400 hover:text-white text-base"></i>
+              </a>
+              <a href="#" class="w-10 h-10 rounded-lg flex items-center justify-center hover:bg-slate-700 transition-colors duration-300">
+                <i class="fab fa-instagram text-slate-400 hover:text-white text-base"></i>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
 
     </div>
 
-    <!-- Bottom -->
-    <div class="border-t border-sky-500 text-center py-4 px-2 text-sm">
-      Â© 2025 Kloud Technologies Limited. All Rights Reserved. Powered By <b>alawaf</b>
+    <!-- Bottom Bar -->
+    <div class="border-t border-slate-700 bg-slate-800">
+      <div class="max-w-7xl mx-auto px-6 py-6">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+          <p class="text-slate-400 text-sm">
+            © 2025 Kloud Technologies Limited. All Rights Reserved.
+          </p>
+          <p class="text-slate-500 text-xs">
+            Powered By <span style="color: #8F18FF;" class="font-medium">al-awaf</span>
+          </p>
+        </div>
+      </div>
     </div>
   </footer>
 
