@@ -530,18 +530,23 @@
                 
                 <div class="scroll-reveal">
                     <div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl p-8 shadow-lg">
-                        <form class="space-y-6">
-                            <div class="grid md:grid-cols-2 gap-6">
+                        <form class="space-y-6" action="{{url('send-email')}}" method="post"> @csrf
+
+                            <!-- <div class="grid md:grid-cols-2 gap-6">
                                 <div>
                                     <input type="text" placeholder="First Name" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300 outline-none">
                                 </div>
                                 <div>
                                     <input type="text" placeholder="Last Name" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300 outline-none">
                                 </div>
-                            </div>
+                            </div> -->
                             
                             <div>
-                                <input type="email" placeholder="Email Address" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300 outline-none">
+                                <input type="text" name="name" placeholder="Full Name" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300 outline-none" required>
+                            </div>
+
+                            <div>
+                                <input type="email" name="email" placeholder="Email Address" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300 outline-none" required>
                             </div>
                             
                             <div>
@@ -549,25 +554,25 @@
                             </div>
 
                             <div>
-                                <select id="division" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300 outline-none">
+                                <select id="division" name="division" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300 outline-none" required>
                                     <option value="">Select Division</option>
                                 </select>
                             </div>
 
                             <div>
-                                <select id="district" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300 outline-none" disabled>
+                                <select id="district" name="district" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300 outline-none" disabled required>
                                     <option value="">Select District</option>
                                 </select>
                             </div>
 
                             <div>
-                                <select id="thana" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300 outline-none" disabled>
+                                <select id="thana" name="thana" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300 outline-none" disabled required>
                                     <option value="">Select Thana</option>
                                 </select>
                             </div>
 
                             <div>
-                                <select id="selectedPackage" name="package" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300 outline-none">
+                                <select id="selectedPackage" name="package" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300 outline-none" required>
                                     <option value="">Select Package</option>
                                     @foreach($packages as $package)
                                     <option value="{{ $package->id }}">{{ $package->name }} - {{ $package->plan }}Mbps (BDT {{ $package->price }})</option>
