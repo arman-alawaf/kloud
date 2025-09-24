@@ -64,10 +64,11 @@ class OrderController extends Controller
             "Package: {$data['package']}",
             function ($message) {
                 $message->to([
-                    'sales@kloud.com.bd', 
-                    'hazrat.ali@kloud.com.bd', 
-                    'arman.sharif@alawaf.com.bd',
-                    'arafat.hossain@kloud.com.bd'
+                    // 'sales@kloud.com.bd', 
+                    // 'hazrat.ali@kloud.com.bd', 
+                    // 'arman.sharif@alawaf.com.bd',
+                    // 'arafat.hossain@kloud.com.bd',
+                    'arman.alawaf@gmail.com',
                 ])
                         ->subject('New Order Notification');
             }

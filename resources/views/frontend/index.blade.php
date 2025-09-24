@@ -357,7 +357,7 @@
                                     <p class="text-gray-600 text-sm">Business Owner, Dhaka</p>
                                 </div>
                             </div>
-                            <p class="text-gray-600 mb-4">"Kloud's 50Mbps connection transformed my online business. No more downtime during peak hours. Their customer support speaks Bangla and understands local needs perfectly!"</p>
+                            <p class="text-gray-600 mb-4">"Kloud's 55Mbps connection transformed my online business. No more downtime during peak hours. Their customer support speaks Bangla and understands local needs perfectly!"</p>
                             <div class="flex text-yellow-400 mb-2">
                                 ★★★★★
                             </div>
