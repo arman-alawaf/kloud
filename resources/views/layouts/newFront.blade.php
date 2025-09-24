@@ -218,7 +218,7 @@
             <li><a href="{{url('business')}}" class="hover:text-[var(--color1)] {{ request()->is('business') ? 'text-[var(--color1)] font-bold' : '' }}">Business</a></li>
             <li><a href="{{url('about')}}" class="hover:text-[var(--color1)] {{ request()->is('about') ? 'text-[var(--color1)] font-bold' : '' }}">About Us</a></li>
             <li><a href="{{url('gallery')}}" class="hover:text-[var(--color1)] {{ request()->is('gallery') ? 'text-[var(--color1)] font-bold' : '' }}">Gallery</a></li>
-            <li>
+            <!-- <li>
               <a href="{{url('offers-today')}}" class="text-orange-600 flex items-center gap-1 hover:text-orange-700 {{ request()->is('offers-today') ? 'text-orange-700 font-bold' : '' }}">
                 <span>
                     <svg width="14" height="15" viewBox="0 0 14 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -232,7 +232,7 @@
                     </svg>
                 </span> Offers Today
               </a>
-            </li>
+            </li> -->
           </ul>
 
           <!-- Buttons (desktop) -->
