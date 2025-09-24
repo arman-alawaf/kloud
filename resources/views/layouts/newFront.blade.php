@@ -275,7 +275,7 @@
             Offers Today
         </a>
         <div class="flex flex-col gap-2 pt-2">
-          <a href="{{url('pay-online')}}" class="text-center bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-full font-semibold hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-pulse-glow">Quick Pay</a>
+          <a href="{{url('pay-online')}}" class="text-center bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-full font-semibold hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-pulse-glow">Smart Pay</a>
           <a href="{{url('self-care')}}" class="text-center bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-full font-semibold hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-pulse-glow">Self Care</a>
         </div>
       </div>
