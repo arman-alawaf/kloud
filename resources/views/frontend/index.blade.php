@@ -847,5 +847,37 @@
             }
         }
     }
+
+    // Check for selected package from package page
+    document.addEventListener('DOMContentLoaded', function() {
+        const selectedPackage = sessionStorage.getItem('selectedPackage');
+        if (selectedPackage) {
+            // Scroll to contact section
+            const contactSection = document.getElementById('contact');
+            if (contactSection) {
+                setTimeout(() => {
+                    contactSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }, 500); // Small delay to ensure page is fully loaded
+            }
+
+            // Select the package in dropdown
+            const packageSelect = document.getElementById('selectedPackage');
+            if (packageSelect) {
+                const options = packageSelect.options;
+                for (let i = 0; i < options.length; i++) {
+                    if (options[i].textContent.includes(selectedPackage)) {
+                        packageSelect.selectedIndex = i;
+                        break;
+                    }
+                }
+            }
+
+            // Clear the stored package
+            sessionStorage.removeItem('selectedPackage');
+        }
+    });
 </script>
 @endsection

@@ -15,7 +15,7 @@ class PackageSeeder extends Seeder
     {
         $packages = [
             [
-                'type' => 'Residential',
+                'type' => 'Residentials',
                 'plan' => '35',
                 'name' => 'Kloud Mini',
                 'price' => '699',
@@ -23,7 +23,7 @@ class PackageSeeder extends Seeder
                 'created_by' => 1,
             ],
             [
-                'type' => 'Residential',
+                'type' => 'Residentials',
                 'plan' => '55',
                 'name' => 'Kloud Neo',
                 'price' => '999',
@@ -31,7 +31,7 @@ class PackageSeeder extends Seeder
                 'created_by' => 1,
             ],
             [
-                'type' => 'Residential',
+                'type' => 'Residentials',
                 'plan' => '45',
                 'name' => 'Kloud Stream',
                 'price' => '899',

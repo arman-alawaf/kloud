@@ -177,22 +177,7 @@
 
     <!-- Navbar -->
     <div class="sticky top-0 z-50">
-      <nav id="navbar" class="bg-[#ffffff20] backdrop-blur-md shadow-lg transition-all duration-2000 ease-in-out border border-white/20">
-        <script>
-          const navbar = document.getElementById('navbar');
-
-          window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-              // scrolled down → solid white with premium shadow, constrained width, and rounded corners
-              navbar.classList.remove('bg-[#ffffff20]', 'border-white/20');
-              navbar.classList.add('bg-white', 'shadow-2xl', 'border-gray-200/50', 'max-w-7xl', 'mx-auto', 'rounded-full');
-            } else {
-              // top → glassmorphism, full width, square corners
-              navbar.classList.remove('bg-[white]', 'shadow-2xl', 'border-gray-200/50', 'max-w-7xl', 'mx-auto', 'rounded-full');
-              navbar.classList.add('bg-[#ffffff20]', 'border-white/20');
-            }
-          });
-        </script>
+      <nav id="navbar" class="bg-white shadow-lg border-b border-gray-200">
 
         <div class="px-6 sm:px-8 lg:px-10 max-w-full mx-auto">
         <div class="flex justify-between items-center py-4">
@@ -209,8 +194,9 @@
             <li><a href="{{url('package')}}" class="hover:text-[var(--color1)] {{ request()->is('package') ? 'text-[var(--color1)] font-bold' : '' }}">Packages</a></li>
             <li><a href="{{url('business')}}" class="hover:text-[var(--color1)] {{ request()->is('business') ? 'text-[var(--color1)] font-bold' : '' }}">Business</a></li>
             <li><a href="{{url('about')}}" class="hover:text-[var(--color1)] {{ request()->is('about') ? 'text-[var(--color1)] font-bold' : '' }}">About Us</a></li>
+            <li><a href="{{url('gallery')}}" class="hover:text-[var(--color1)] {{ request()->is('gallery') ? 'text-[var(--color1)] font-bold' : '' }}">Gallery</a></li>
             <li>
-              <a href="#" class="text-orange-600 flex items-center gap-1">
+              <a href="{{url('offers-today')}}" class="text-orange-600 flex items-center gap-1 hover:text-orange-700 {{ request()->is('offers-today') ? 'text-orange-700 font-bold' : '' }}">
                 <span>
                     <svg width="14" height="15" viewBox="0 0 14 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6.62375 10.6241C5.43375 10.8622 4.725 11.6108 4.725 12.674C4.725 13.8138 5.69625 14.7325 6.90375 14.7325C8.6975 14.7325 10.15 13.3205 10.15 11.5768C10.15 10.6666 10.0188 9.77347 9.7475 8.92286C9.05625 9.83301 7.8225 10.3859 6.62375 10.6241ZM8.3125 0C8.3125 0 8.96 2.25411 8.96 4.08291C8.96 5.83516 7.77875 7.25567 5.97625 7.25567C4.165 7.25567 2.8 5.83516 2.8 4.08291L2.82625 3.77669C1.05875 5.81815 0 8.46353 0 11.3386C0 15.0983 3.1325 18.1434 7 18.1434C10.8675 18.1434 14 15.0983 14 11.3386C14 6.75381 11.7338 2.6624 8.3125 0ZM7 16.4422C4.10375 16.4422 1.75 14.1541 1.75 11.3386C1.75 10.0372 2.0125 8.75274 2.5025 7.5704C3.38625 8.42951 4.61125 8.95688 5.97625 8.95688C8.30375 8.95688 10.1325 7.40027 10.5963 5.1887C11.6725 7.06003 12.25 9.16103 12.25 11.3386C12.25 14.1541 9.89625 16.4422 7 16.4422Z" fill="url(#paint0_linear_59_447)"/>
@@ -252,7 +238,8 @@
         <a href="{{url('package')}}" class="block text-gray-800 font-medium hover:text-[var(--color1)] {{ request()->is('package') ? 'text-[var(--color1)] font-bold' : '' }}">Packages</a>
         <a href="{{url('business')}}" class="block text-gray-800 font-medium hover:text-[var(--color1)] {{ request()->is('business') ? 'text-[var(--color1)] font-bold' : '' }}">Business</a>
         <a href="{{url('about')}}" class="block text-gray-800 font-medium hover:text-[var(--color1)] {{ request()->is('about') ? 'text-[var(--color1)] font-bold' : '' }}">About Us</a>
-        <a href="#" class="block text-orange-600 font-medium">
+        <a href="{{url('gallery')}}" class="block text-gray-800 font-medium hover:text-[var(--color1)] {{ request()->is('gallery') ? 'text-[var(--color1)] font-bold' : '' }}">Gallery</a>
+        <a href="{{url('offers-today')}}" class="block text-orange-600 font-medium hover:text-orange-700 {{ request()->is('offers-today') ? 'text-orange-700 font-bold' : '' }}">
             <svg width="14" height="15" viewBox="0 0 14 19" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M6.62375 10.6241C5.43375 10.8622 4.725 11.6108 4.725 12.674C4.725 13.8138 5.69625 14.7325 6.90375 14.7325C8.6975 14.7325 10.15 13.3205 10.15 11.5768C10.15 10.6666 10.0188 9.77347 9.7475 8.92286C9.05625 9.83301 7.8225 10.3859 6.62375 10.6241ZM8.3125 0C8.3125 0 8.96 2.25411 8.96 4.08291C8.96 5.83516 7.77875 7.25567 5.97625 7.25567C4.165 7.25567 2.8 5.83516 2.8 4.08291L2.82625 3.77669C1.05875 5.81815 0 8.46353 0 11.3386C0 15.0983 3.1325 18.1434 7 18.1434C10.8675 18.1434 14 15.0983 14 11.3386C14 6.75381 11.7338 2.6624 8.3125 0ZM7 16.4422C4.10375 16.4422 1.75 14.1541 1.75 11.3386C1.75 10.0372 2.0125 8.75274 2.5025 7.5704C3.38625 8.42951 4.61125 8.95688 5.97625 8.95688C8.30375 8.95688 10.1325 7.40027 10.5963 5.1887C11.6725 7.06003 12.25 9.16103 12.25 11.3386C12.25 14.1541 9.89625 16.4422 7 16.4422Z" fill="url(#paint0_linear_59_447)"/>
             <defs>
