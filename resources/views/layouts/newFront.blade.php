@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Kloud Technologies Limited</title>
+    <title>Test Kloud Technologies Limited</title>
 
     <link rel="shortcut icon" href="{{asset('tailwind/img/favicon.png')}}" type="image/x-icon">
 
