@@ -640,14 +640,13 @@
     });
 
     // Form submission handling
-    const contactForm = document.querySelector('form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            // Add form submission logic here
-            alert('Thank you for your message! We\'ll get back to you soon.');
-        });
-    }
+    // const contactForm = document.querySelector('form');
+    // if (contactForm) {
+    //     contactForm.addEventListener('submit', function(e) {
+    //         e.preventDefault();
+    //         alert('Thank you for your message! We\'ll get back to you soon.');
+    //     });
+    // }
 
     // Initialize Testimonials Swiper after DOM load
     document.addEventListener('DOMContentLoaded', function() {
