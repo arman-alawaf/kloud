@@ -431,7 +431,7 @@
             © 2025 Kloud Technologies Limited. All Rights Reserved.
           </p>
           <p class="text-slate-500 text-xs">
-            Powered By <span style="color: #8F18FF;" class="font-medium">al-awaf</span>
+            Powered By <span class="font-bold text-white">al-awaf</span>
           </p>
         </div>
       </div>
