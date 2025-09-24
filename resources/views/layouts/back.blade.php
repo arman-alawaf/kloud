@@ -65,6 +65,9 @@
                 <a class="nav-link {{ request()->is('sliders') ? 'active' : '' }}" href="{{url('sliders')}}">Sliders</a>
               </li>
               <li class="nav-item">
+                <a class="nav-link {{ request()->is('galleries') ? 'active' : '' }}" href="{{url('galleries')}}">Galleries</a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link {{ request()->is('users') ? 'active' : '' }}" href="{{url('users')}}">Users</a>
               </li>
               @endif

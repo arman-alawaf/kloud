@@ -71,6 +71,29 @@
     }
     /*ANIMATED SHADOW END*/
 
+    /* Navbar scroll effect */
+    .navbar-scrolled {
+      max-width: 80rem !important; /* max-w-7xl */
+      margin-left: auto !important;
+      margin-right: auto !important;
+      padding-left: 1rem !important; /* px-4 */
+      padding-right: 1rem !important; /* px-4 */
+      border-radius: 9999px !important; /* rounded-full */
+    }
+    @media (min-width: 640px) {
+      .navbar-scrolled {
+        padding-left: 1.5rem !important; /* sm:px-6 */
+        padding-right: 1.5rem !important; /* sm:px-6 */
+      }
+    }
+    @media (min-width: 1024px) {
+      .navbar-scrolled {
+        padding-left: 2rem !important; /* lg:px-8 */
+        padding-right: 2rem !important; /* lg:px-8 */
+      }
+    }
+    /* Navbar scroll effect end */
+
   </style>
 
 <style>
@@ -179,7 +202,7 @@
     <div class="sticky top-0 z-50">
       <nav id="navbar" class="bg-white shadow-lg border-b border-gray-200">
 
-        <div class="px-6 sm:px-8 lg:px-10 max-w-full mx-auto">
+        <div id="navbar-container" class="px-6 sm:px-8 lg:px-10 max-w-full mx-auto transition-all duration-300">
         <div class="flex justify-between items-center py-4">
 
             <!-- Logo -->
@@ -265,6 +288,16 @@
       const menu = document.getElementById("mobile-menu");
       btn.addEventListener("click", () => {
         menu.classList.toggle("hidden");
+      });
+
+      // Navbar scroll effect
+      const navbarContainer = document.getElementById("navbar-container");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 100) {
+          navbarContainer.classList.add("navbar-scrolled");
+        } else {
+          navbarContainer.classList.remove("navbar-scrolled");
+        }
       });
     </script>
 

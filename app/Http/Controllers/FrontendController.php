@@ -11,6 +11,10 @@ class FrontendController extends Controller
         $data['packages'] = Package::latest()->get();
         return view('frontend.index', $data);
     }
+    public function offersToday(){
+        $data['packages'] = Package::latest()->get();
+        return view('frontend.new.offersToday', $data);
+    }
     public function package(){
         $data['BusinessPackages'] = Package::where('type','Business')->get();
         $data['ResidentialsPackages'] = Package::where('type','Residentials')->get();

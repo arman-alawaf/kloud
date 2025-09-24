@@ -84,7 +84,7 @@
             </div>
 
             <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a href="#solutions" class="px-8 py-4 bg-gray-900 text-white font-medium rounded-full hover:bg-gray-800 transition-all duration-300">
+                <a href="#solutions" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-pulse-glow">
                     Explore Solutions
                 </a>
                 <a href="#contact" class="px-8 py-4 border border-gray-300 text-gray-700 font-medium rounded-full hover:border-gray-400 transition-all duration-300">

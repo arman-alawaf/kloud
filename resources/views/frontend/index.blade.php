@@ -115,7 +115,7 @@
 
                     <div class="flex items-center space-x-8 animate-fade-in-up">
                         <div class="text-center">
-                            <div class="text-2xl font-bold gradient-text">100Mbps</div>
+                            <div class="text-2xl font-bold gradient-text">300Mbps</div>
                             <div class="text-sm text-gray-600">Max Speed</div>
                         </div>
                         <div class="text-center">
@@ -270,7 +270,7 @@
                     <div class="relative bg-white rounded-3xl p-8 shadow-2xl">
                         <div class="grid grid-cols-2 gap-6">
                             <div class="text-center p-4 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl">
-                                <div class="text-3xl font-bold gradient-text mb-2">100Mbps</div>
+                                <div class="text-3xl font-bold gradient-text mb-2">300Mbps</div>
                                 <div class="text-sm text-gray-600">Maximum Speed</div>
                             </div>
                             <div class="text-center p-4 bg-gradient-to-br from-purple-50 to-pink-100 rounded-2xl">

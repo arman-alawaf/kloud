@@ -11,6 +11,7 @@ use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\SliderController;
+use App\Http\Controllers\GalleryController;
 
 // Route::get('/', function () { return view('welcome'); });
 Route::get('/', [FrontendController::class, 'index']);
@@ -83,6 +84,7 @@ Route::middleware(['auth', 'user-access:Admin'])->group(function () {
     Route::resource('orders', OrderController::class);
     Route::resource('news', NewsController::class);
     Route::resource('sliders', SliderController::class);
+    Route::resource('galleries', GalleryController::class);
 
 });
   

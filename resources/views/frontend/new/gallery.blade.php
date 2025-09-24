@@ -1,6 +1,9 @@
 @extends('layouts.newFront')
 
 @section('content')
+@php
+    $galleries = App\Models\Gallery::where('status', 'active')->get();
+@endphp
 <style>
     .gallery-item {
         position: relative;
@@ -224,127 +227,17 @@
     <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div class="max-w-7xl mx-auto">
             <div class="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6" id="gallery-grid">
-
-                <!-- Installation Images -->
-                <div class="masonry-item gallery-item scroll-reveal" data-category="installations">
-                    <img src="https://picsum.photos/400/300?random=1" alt="Fiber Optic Installation" class="w-full rounded-lg">
+                @foreach($galleries as $gallery)
+                <div class="masonry-item gallery-item scroll-reveal" data-category="gallery">
+                    <img src="{{ asset('storage/' . $gallery->image) }}" alt="{{ $gallery->title }}" class="w-full rounded-lg">
                     <div class="gallery-overlay">
                         <div class="text-center text-white">
-                            <h3 class="text-lg font-semibold mb-2">Fiber Optic Installation</h3>
-                            <p class="text-sm opacity-90">Professional cable laying and termination</p>
+                            <h3 class="text-lg font-semibold mb-2">{{ $gallery->title }}</h3>
+                            <p class="text-sm opacity-90">{{ $gallery->description ?: 'Gallery image' }}</p>
                         </div>
                     </div>
                 </div>
-
-                <div class="masonry-item gallery-item scroll-reveal" data-category="installations">
-                    <img src="https://picsum.photos/400/400?random=2" alt="Network Equipment Setup" class="w-full rounded-lg">
-                    <div class="gallery-overlay">
-                        <div class="text-center text-white">
-                            <h3 class="text-lg font-semibold mb-2">Network Equipment Setup</h3>
-                            <p class="text-sm opacity-90">State-of-the-art networking hardware</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="masonry-item gallery-item scroll-reveal" data-category="customers">
-                    <img src="https://picsum.photos/400/500?random=3" alt="Happy Customer" class="w-full rounded-lg">
-                    <div class="gallery-overlay">
-                        <div class="text-center text-white">
-                            <h3 class="text-lg font-semibold mb-2">Satisfied Customer</h3>
-                            <p class="text-sm opacity-90">Residential internet installation</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="masonry-item gallery-item scroll-reveal" data-category="technology">
-                    <img src="https://picsum.photos/400/350?random=4" alt="Data Center" class="w-full rounded-lg">
-                    <div class="gallery-overlay">
-                        <div class="text-center text-white">
-                            <h3 class="text-lg font-semibold mb-2">Data Center Infrastructure</h3>
-                            <p class="text-sm opacity-90">High-performance server rooms</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="masonry-item gallery-item scroll-reveal" data-category="events">
-                    <img src="https://picsum.photos/400/450?random=5" alt="Team Meeting" class="w-full rounded-lg">
-                    <div class="gallery-overlay">
-                        <div class="text-center text-white">
-                            <h3 class="text-lg font-semibold mb-2">Team Collaboration</h3>
-                            <p class="text-sm opacity-90">Working together for excellence</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="masonry-item gallery-item scroll-reveal" data-category="installations">
-                    <img src="https://picsum.photos/400/320?random=6" alt="Cable Management" class="w-full rounded-lg">
-                    <div class="gallery-overlay">
-                        <div class="text-center text-white">
-                            <h3 class="text-lg font-semibold mb-2">Cable Management</h3>
-                            <p class="text-sm opacity-90">Organized and efficient cabling</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="masonry-item gallery-item scroll-reveal" data-category="customers">
-                    <img src="https://picsum.photos/400/380?random=7" alt="Business Client" class="w-full rounded-lg">
-                    <div class="gallery-overlay">
-                        <div class="text-center text-white">
-                            <h3 class="text-lg font-semibold mb-2">Business Client</h3>
-                            <p class="text-sm opacity-90">Enterprise internet solution</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="masonry-item gallery-item scroll-reveal" data-category="technology">
-                    <img src="https://picsum.photos/400/420?random=8" alt="Network Monitoring" class="w-full rounded-lg">
-                    <div class="gallery-overlay">
-                        <div class="text-center text-white">
-                            <h3 class="text-lg font-semibold mb-2">Network Monitoring</h3>
-                            <p class="text-sm opacity-90">24/7 network surveillance</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="masonry-item gallery-item scroll-reveal" data-category="events">
-                    <img src="https://picsum.photos/400/360?random=9" alt="Customer Training" class="w-full rounded-lg">
-                    <div class="gallery-overlay">
-                        <div class="text-center text-white">
-                            <h3 class="text-lg font-semibold mb-2">Customer Training</h3>
-                            <p class="text-sm opacity-90">Empowering our customers</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="masonry-item gallery-item scroll-reveal" data-category="installations">
-                    <img src="https://picsum.photos/400/400?random=10" alt="Router Installation" class="w-full rounded-lg">
-                    <div class="gallery-overlay">
-                        <div class="text-center text-white">
-                            <h3 class="text-lg font-semibold mb-2">Router Installation</h3>
-                            <p class="text-sm opacity-90">High-performance routing equipment</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="masonry-item gallery-item scroll-reveal" data-category="customers">
-                    <img src="https://picsum.photos/400/480?random=11" alt="Family Setup" class="w-full rounded-lg">
-                    <div class="gallery-overlay">
-                        <div class="text-center text-white">
-                            <h3 class="text-lg font-semibold mb-2">Family Internet Setup</h3>
-                            <p class="text-sm opacity-90">Complete home networking solution</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="masonry-item gallery-item scroll-reveal" data-category="technology">
-                    <img src="https://picsum.photos/400/340?random=12" alt="Server Room" class="w-full rounded-lg">
-                    <div class="gallery-overlay">
-                        <div class="text-center text-white">
-                            <h3 class="text-lg font-semibold mb-2">Server Infrastructure</h3>
-                            <p class="text-sm opacity-90">Enterprise-grade server solutions</p>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
