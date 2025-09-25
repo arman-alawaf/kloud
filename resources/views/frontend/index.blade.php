@@ -497,7 +497,7 @@
                             </div>
                             <div>
                                 <h4 class="font-semibold text-gray-800">Email Us</h4>
-                                <p class="text-gray-600">hello@kloud.com</p>
+                                <p class="text-gray-600">contact@kloud.com.bd</p>
                             </div>
                         </div>
                         
@@ -509,7 +509,7 @@
                             </div>
                             <div>
                                 <h4 class="font-semibold text-gray-800">Call Us</h4>
-                                <p class="text-gray-600">+1 (555) 123-4567</p>
+                                <p class="text-gray-600">+880 9649-161216</p>
                             </div>
                         </div>
                         
@@ -522,7 +522,7 @@
                             </div>
                             <div>
                                 <h4 class="font-semibold text-gray-800">Visit Us</h4>
-                                <p class="text-gray-600">Dhaka, Bangladesh</p>
+                                <p class="text-gray-600">Dom-Inno, House-13, Road-7, Block-F, Bangladesh</p>
                             </div>
                         </div>
                     </div>

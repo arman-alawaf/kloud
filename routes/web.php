@@ -19,6 +19,7 @@ Route::get('about', function () { return view('frontend.new.about'); });
 Route::get('business', function () { return view('frontend.new.business'); });
 Route::get('offers-today', function () { return view('frontend.new.offersToday'); });
 Route::get('gallery', function () { return view('frontend.new.gallery'); });
+Route::get('all-blog', function () { return view('frontend.new.allBlog'); });
 Route::get('self-care', function () { return view('frontend.new.login'); });
 Route::get('pay-online', function () { return view('frontend.new.pay'); });
 
