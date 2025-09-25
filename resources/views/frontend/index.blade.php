@@ -522,7 +522,7 @@
                             </div>
                             <div>
                                 <h4 class="font-semibold text-gray-800">Visit Us</h4>
-                                <p class="text-gray-600">Dom-Inno, House-13, Road-7, Block-F, Bangladesh</p>
+                                <p class="text-gray-600">Dom-Inno, House-13, Road-7, Block-F, Banani 1213, Dhaka, Bangladesh</p>
                             </div>
                         </div>
                     </div>
